@@ -43,6 +43,12 @@ export const theme = {
   });
 
   templates.push({
+    filename: `b24ui/others.ts`,
+    write: true,
+    getContents: () => `export const theme = "text-5xl text-7xl";`,
+  });
+
+  templates.push({
     filename: "b24ui.css",
     write: true,
     getContents: () => `@source "./b24ui";
