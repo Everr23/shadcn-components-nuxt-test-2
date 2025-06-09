@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "my-module-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "nuxt": "^3.17.5",
+    "tailwindcss": "^4.1.8"
+  }
+}
