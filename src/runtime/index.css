@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import "#build/b24ui.css";
 
 @custom-variant dark (&:is(.dark *));
 

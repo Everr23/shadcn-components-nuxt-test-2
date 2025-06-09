@@ -10,6 +10,7 @@ import {
   installModule,
   hasNuxtModule,
 } from "@nuxt/kit";
+import { addTemplates } from "./templates";
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {}
@@ -44,9 +45,6 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.postcss.plugins["@tailwindcss/postcss"] = {};
     }
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolve("./runtime/plugin"));
-
     addComponentsDir(
       {
         path: resolve("./runtime/components/ui"),
@@ -59,5 +57,7 @@ export default defineNuxtModule<ModuleOptions>({
         prepend: true,
       }
     );
+
+    addTemplates();
   },
 });
