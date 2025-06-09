@@ -1,4 +1,4 @@
-@import "#build/b24ui.css";
+@import "#build/unaxt.css";
 
 @custom-variant dark (&:is(.dark *));
 

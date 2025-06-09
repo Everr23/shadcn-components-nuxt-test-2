@@ -19,24 +19,15 @@ export default defineNuxtModule<ModuleOptions>({
   meta: {
     name,
     version,
-    configKey: "b24ui",
+    configKey: "unaxt",
   },
   // Default configuration options of the Nuxt module
   defaults: {},
   async setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url);
 
-    nuxt.options.b24ui = options;
-    nuxt.options.alias["#b24ui"] = resolve("./runtime");
-
-    // Isolate root node from portaled components
-    nuxt.options.app.rootAttrs = nuxt.options.app.rootAttrs || {};
-    nuxt.options.app.rootAttrs.class = [
-      nuxt.options.app.rootAttrs.class,
-      "isolate",
-    ]
-      .filter(Boolean)
-      .join(" ");
+    nuxt.options.unaxt = options;
+    nuxt.options.alias["#unaxt"] = resolve("./runtime");
 
     if (nuxt.options.builder === "@nuxt/vite-builder") {
       const plugin = await import("@tailwindcss/vite").then((r) => r.default);

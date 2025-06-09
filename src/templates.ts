@@ -5,7 +5,7 @@ export function getTemplates() {
   const templates: NuxtTemplate[] = [];
 
   templates.push({
-    filename: `b24ui/button.ts`,
+    filename: `unaxt/button.ts`,
     write: true,
     getContents: () => `
 export const theme = {
@@ -43,15 +43,15 @@ export const theme = {
   });
 
   templates.push({
-    filename: `b24ui/others.ts`,
+    filename: `unaxt/others.ts`,
     write: true,
     getContents: () => `export const theme = "text-5xl text-7xl";`,
   });
 
   templates.push({
-    filename: "b24ui.css",
+    filename: "unaxt.css",
     write: true,
-    getContents: () => `@source "./b24ui";
+    getContents: () => `@source "./unaxt";
 
 @theme default {}
 `,
